@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+#root {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.description {
+    margin: 20px 0;
+}
+
+.loading-spinner {
+    height: 100px;
+    width: 100px;
+    border: 5px solid;
+    border-right-color: dodgerblue;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+
+    &[data-loading=false] {
+        animation-play-state: paused;
+    }
+
+    &[data-loading=true] {
+        animation-play-state: running;
+    }
+}
+
+.hint {
+    margin: 20px 0;
+}
+
+.button {
+    cursor: pointer;
+    padding: 10px;
+}
+
+@keyframes rotation {
+    to {
+        transform: rotate(360deg);
+    }
+}
