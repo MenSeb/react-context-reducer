@@ -1,3 +1,2 @@
-export { default as Provider } from './provider';
-export { default as Consumer } from './consumer';
-export { default as useContext } from './hook';
+export * from './components';
+export * from './hooks';
