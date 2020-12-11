@@ -1,42 +1,31 @@
-import React from 'react';
 import { act, renderHook } from '@testing-library/react-hooks';
-import { Provider } from 'components';
 import { useContextGlobal } from 'hooks';
-
-const action = 'action';
-const actions = {
-    [action]: (state, args) => ({ ...state, ...args }),
-};
-const additional = { baz: 'baz' };
-const initial = { bar: 'bar' };
-const extra = { foo: 'foo' };
-const full = { ...initial, ...additional };
-const config = (initial) => ({ ...initial, ...additional });
-
-function wrapper({ children, config, initial }) {
-    return (
-        <Provider actions={actions} initial={initial} config={config}>
-            {children}
-        </Provider>
-    );
-}
+import { action, config, objConfig, objDispatch, objState, wrapper } from '../';
 
 describe('Provider', () => {
+    it('provides a way to update the state using the dispatcher', () => {
+        const { result } = renderHook(() => useContextGlobal(), { wrapper });
+
+        expect(result.current.state).toEqual({});
+
+        act(() => result.current.dispatch[action](objState));
+
+        expect(result.current.state).toEqual(objState);
+    });
+
     it('provides a state object', () => {
         const { result } = renderHook(() => useContextGlobal(), {
+            initialProps: { initial: objState },
             wrapper,
-            initialProps: { config, initial },
         });
 
-        expect(result.current.state).toEqual(full);
+        expect(result.current.state).toEqual(objState);
     });
 
     it('provides a dispatcher object', () => {
         const { result } = renderHook(() => useContextGlobal(), { wrapper });
 
-        expect(result.current.dispatch).toEqual({
-            [action]: expect.any(Function),
-        });
+        expect(result.current.dispatch).toEqual(objDispatch);
     });
 
     it('provides an empty object without initial state', () => {
@@ -47,29 +36,20 @@ describe('Provider', () => {
 
     it('provides the initial state when provided', () => {
         const { result } = renderHook(() => useContextGlobal(), {
+            initialProps: { initial: objState },
             wrapper,
-            initialProps: { initial },
         });
 
-        expect(result.current.state).toEqual(initial);
+        expect(result.current.state).toEqual(objState);
     });
 
     it('provides a way to configure the initial state', () => {
         const { result } = renderHook(() => useContextGlobal(), {
+            initialProps: { config, initial: objState },
             wrapper,
-            initialProps: { config },
         });
 
-        expect(result.current.state).toEqual(additional);
-    });
-
-    it('updates the state when using the dispatcher', () => {
-        const { result } = renderHook(() => useContextGlobal(), { wrapper });
-
-        expect(result.current.state).toEqual({});
-
-        act(() => result.current.dispatch[action](extra));
-
-        expect(result.current.state).toEqual(extra);
+        expect(config).toHaveBeenCalledWith(objState);
+        expect(result.current.state).toEqual({ ...objState, ...objConfig });
     });
 });

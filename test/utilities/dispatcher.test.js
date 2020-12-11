@@ -1,19 +1,23 @@
 import { createDispatcher } from 'utilities';
-
-const action = 'action';
-const actions = { [action]: jest.fn() };
-const args = { bar: 'bar', foo: 'foo' };
-const dispatch = jest.fn();
-const dispatcher = createDispatcher({ actions, dispatch });
+import {
+    action,
+    actions,
+    callback as dispatch,
+    objDispatch,
+    objState,
+} from '../';
 
 describe('createDispatcher', () => {
     it('returns an object of actions to dispatch', () => {
-        expect(dispatcher).toMatchObject({ [action]: expect.any(Function) });
+        expect(createDispatcher({ actions, dispatch })).toMatchObject(
+            objDispatch,
+        );
     });
 
     describe('When dispatcher is used', () => {
-        afterEach(() => dispatch.mockReset());
-        beforeEach(() => dispatcher[action](args));
+        beforeEach(() =>
+            createDispatcher({ actions, dispatch })[action](objState),
+        );
 
         it('calls dispatch only once for the action concerned', () => {
             expect(dispatch).toHaveBeenCalledTimes(1);
@@ -27,7 +31,7 @@ describe('createDispatcher', () => {
 
         it('calls dispatch with the arguments provided', () => {
             expect(dispatch).toHaveBeenCalledWith(
-                expect.objectContaining(args),
+                expect.objectContaining(objState),
             );
         });
     });
