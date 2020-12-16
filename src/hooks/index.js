@@ -1,3 +1,3 @@
 export { default as useContextDispatch } from './dispatch';
-export { default as useContextGlobal } from './global';
+export { default as useContextReducer } from './reducer';
 export { default as useContextState } from './state';

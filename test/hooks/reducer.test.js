@@ -1,14 +1,14 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useContextGlobal } from 'hooks';
+import { useContextReducer } from 'hooks';
 import { objDispatch, objState, wrapper } from '../';
 
-describe('useContextGlobal', () => {
+describe('useContextReducer', () => {
     it('throws an error when used outside the provider', () => {
-        expect(jest.fn(renderHook(() => useContextGlobal()))).toThrow();
+        expect(jest.fn(renderHook(() => useContextReducer()))).toThrow();
     });
 
     it('returns dispatch and state when used inside the provider', () => {
-        const { result } = renderHook(() => useContextGlobal(), {
+        const { result } = renderHook(() => useContextReducer(), {
             initialProps: { initial: objState },
             wrapper,
         });

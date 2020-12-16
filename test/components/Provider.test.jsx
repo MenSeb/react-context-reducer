@@ -1,10 +1,10 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-import { useContextGlobal } from 'hooks';
+import { useContextReducer } from 'hooks';
 import { action, config, objConfig, objDispatch, objState, wrapper } from '../';
 
 describe('Provider', () => {
     it('provides a way to update the state using the dispatcher', () => {
-        const { result } = renderHook(() => useContextGlobal(), { wrapper });
+        const { result } = renderHook(() => useContextReducer(), { wrapper });
 
         expect(result.current.state).toEqual({});
 
@@ -14,7 +14,7 @@ describe('Provider', () => {
     });
 
     it('provides a state object', () => {
-        const { result } = renderHook(() => useContextGlobal(), {
+        const { result } = renderHook(() => useContextReducer(), {
             initialProps: { initial: objState },
             wrapper,
         });
@@ -23,19 +23,19 @@ describe('Provider', () => {
     });
 
     it('provides a dispatcher object', () => {
-        const { result } = renderHook(() => useContextGlobal(), { wrapper });
+        const { result } = renderHook(() => useContextReducer(), { wrapper });
 
         expect(result.current.dispatch).toEqual(objDispatch);
     });
 
     it('provides an empty object without initial state', () => {
-        const { result } = renderHook(() => useContextGlobal(), { wrapper });
+        const { result } = renderHook(() => useContextReducer(), { wrapper });
 
         expect(result.current.state).toEqual({});
     });
 
     it('provides the initial state when provided', () => {
-        const { result } = renderHook(() => useContextGlobal(), {
+        const { result } = renderHook(() => useContextReducer(), {
             initialProps: { initial: objState },
             wrapper,
         });
@@ -44,7 +44,7 @@ describe('Provider', () => {
     });
 
     it('provides a way to configure the initial state', () => {
-        const { result } = renderHook(() => useContextGlobal(), {
+        const { result } = renderHook(() => useContextReducer(), {
             initialProps: { config, initial: objState },
             wrapper,
         });
