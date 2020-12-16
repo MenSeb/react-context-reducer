@@ -1,7 +1,7 @@
 {
-  "name": "@menseb/react-context",
+  "name": "@menseb/react-context-reducer",
   "version": "1.0.0",
-  "description": "React Context",
+  "description": "React Context Reducer",
   "main": "index.js",
   "module": "index.js",
   "files": [
@@ -22,18 +22,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MenSeb/react-context.git"
+    "url": "git+https://github.com/MenSeb/react-context-reducer.git"
   },
   "keywords": [
     "react",
-    "context"
+    "context",
+    "reducer"
   ],
   "author": "Sébastien Menard",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MenSeb/react-context/issues"
+    "url": "https://github.com/MenSeb/react-context-reducer/issues"
   },
-  "homepage": "https://github.com/MenSeb/react-context#readme",
+  "homepage": "https://github.com/MenSeb/react-context-reducer#readme",
   "dependencies": {
     "@babel/runtime": "^7.12.5"
   },
