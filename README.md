@@ -6,6 +6,7 @@
 
 ![npm](https://img.shields.io/npm/v/@menseb/react-context-reducer)
 ![NPM](https://img.shields.io/npm/l/@menseb/react-context-reducer)
+![Travis (.com)](https://img.shields.io/travis/com/MenSeb/react-context-reducer)
 
 > A simple package to use the reducer pattern with React Context.
 
