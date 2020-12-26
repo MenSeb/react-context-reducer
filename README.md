@@ -8,6 +8,7 @@
 ![NPM](https://img.shields.io/npm/l/@menseb/react-context-reducer)
 [![Build Status](https://travis-ci.com/MenSeb/react-context-reducer.svg?token=8TzPeku6xVPzgovguE6A&branch=master)](https://travis-ci.com/MenSeb/react-context-reducer)
 [![CodeFactor](https://www.codefactor.io/repository/github/menseb/react-context-reducer/badge?s=d3b4606115f45a496c1e67e48d9651fba4afdd04)](https://www.codefactor.io/repository/github/menseb/react-context-reducer)
+[![codecov](https://codecov.io/gh/MenSeb/react-context-reducer/branch/master/graph/badge.svg?token=CPQFVL6YFJ)](https://codecov.io/gh/MenSeb/react-context-reducer)
 
 > A simple package to use the reducer pattern with React Context.
 
