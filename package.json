@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "rm -rf ./dist && webpack --config webpack.prod.js",
+    "codecov": "codecov",
     "coverage": "jest --coverage && codecov",
     "demo": "webpack --config webpack.dev.js",
     "deploy": "gh-pages -d demo",
@@ -51,6 +52,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.1",
     "babel-plugin-jsx-remove-data-test-id": "^2.1.3",
+    "codecov": "^3.8.1",
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.1",
     "eslint": "^7.14.0",
