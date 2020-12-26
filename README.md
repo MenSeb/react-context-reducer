@@ -4,6 +4,8 @@
 
 # React Context
 
+[![npm version](https://badge.fury.io/js/%40menseb%2Freact-context-reducer.svg)](https://badge.fury.io/js/%40menseb%2Freact-context-reducer)
+
 > A simple package to use the reducer pattern with React Context.
 
 ## Installation
