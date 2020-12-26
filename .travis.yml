@@ -1,10 +1,9 @@
 language: node_js
 
 node_js:
-  - "14"
+  - "node"
 
 scripts:
-  - npm install codecov -g
   - npm run coverage
 
 after_success:
