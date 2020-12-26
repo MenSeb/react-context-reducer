@@ -5,7 +5,7 @@ node_js:
 
 scripts:
   - npm install codecov -g
-  - codecov
+  - npm run coverage
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
