@@ -1,8 +1,8 @@
-[logo]: https://github.com/MenSeb/react-context/blob/master/demo/logo.svg "React context"
+[logo]: https://github.com/MenSeb/react-context-reducer/blob/master/demo/logo.svg "React Context Reducer"
 
-![React context][logo]
+![React Context Reducer][logo]
 
-# React Context
+# React Context Reducer
 
 ![npm](https://img.shields.io/npm/v/@menseb/react-context-reducer)
 ![NPM](https://img.shields.io/npm/l/@menseb/react-context-reducer)
@@ -15,20 +15,18 @@
 ## Installation
 
 ```
-npm i @menseb/react-context
+npm i @menseb/react-context-reducer
 ```
 
 ## How to use
 
-- Import the module
+- Import the Provider
 
 ```javascript
-import createReactContext from '@menseb/react-context';
-// or
-import { createReactContext } from '@menseb/react-context';
+import { Provider } from '@menseb/react-context-reducer';
 ```
 
-- Create your actions (required)
+- Use your actions (required)
 
 ```javascript
 export const actions = {
