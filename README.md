@@ -1,16 +1,22 @@
-[logo]: https://github.com/MenSeb/react-context-reducer/blob/master/demo/logo.svg "React Context Reducer"
+<div align="center">
+    <img src="https://github.com/MenSeb/react-context-reducer/blob/master/demo/logo.svg" width="250" height="250" alt="React Context Reducer" />
+</div>
 
-![React Context Reducer][logo]
+<h1 align="center">
+    React Context Reducer
+</h1>
 
-# React Context Reducer
+<p align="center">
+    Use React context with the reducer pattern.
+</p>
+
+<br>
 
 ![npm](https://img.shields.io/npm/v/@menseb/react-context-reducer)
 ![NPM](https://img.shields.io/npm/l/@menseb/react-context-reducer)
 [![Build Status](https://travis-ci.com/MenSeb/react-context-reducer.svg?token=8TzPeku6xVPzgovguE6A&branch=master)](https://travis-ci.com/MenSeb/react-context-reducer)
 [![CodeFactor](https://www.codefactor.io/repository/github/menseb/react-context-reducer/badge?s=d3b4606115f45a496c1e67e48d9651fba4afdd04)](https://www.codefactor.io/repository/github/menseb/react-context-reducer)
 [![Coverage Status](https://coveralls.io/repos/github/MenSeb/react-context-reducer/badge.svg?branch=master)](https://coveralls.io/github/MenSeb/react-context-reducer?branch=master)
-
-> A simple package to use the reducer pattern with React Context.
 
 ## Installation
 
