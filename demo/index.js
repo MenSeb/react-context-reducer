@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import * as Context from '~';
+import { ConsumerDispatch, Provider, useContextState } from '../dist';
 import './styles.scss';
 
 function toggle(state) {
@@ -20,42 +20,45 @@ const actions = { toggle };
 const initial = { loading: false };
 
 function LoadingSpinner() {
-    const { state } = Context.useContext();
+    const { loading } = useContextState();
 
     return (
-        <div
-            className="loading-spinner"
-            data-loading={state.loading.toString()}
-        />
+        <div className="loading-spinner" data-loading={loading.toString()} />
     );
 }
 
 function Demo() {
     return (
-        <Context.Provider actions={actions} config={config} initial={initial}>
-            <Context.Consumer>
-                {({ api }) => (
+        <Provider actions={actions} config={config} initial={initial}>
+            <ConsumerDispatch>
+                {(dispatch) => (
                     <>
-                        <h1 className="title">React Context</h1>
+                        <img
+                            alt="React Context Reducer"
+                            className="logo"
+                            src="logo.svg"
+                        />
+                        <h1 className="title">React Context Reducer</h1>
                         <p className="description">
-                            This is an example of React context using the
-                            reducer pattern
+                            This is a loading example using React context with
+                            the reducer pattern
                         </p>
                         <LoadingSpinner />
                         <p className="hint">
-                            Press the button to toggle between loading state
+                            Press the button below to toggle between loading
+                            states
                         </p>
                         <button
                             className="button"
-                            onClick={api.toggle}
+                            onClick={dispatch.toggle}
                             type="button"
                         >
                             Toggle Loading
                         </button>
                     </>
                 )}
-            </Context.Consumer>
-        </Context.Provider>
+            </ConsumerDispatch>
+        </Provider>
     );
 }
 

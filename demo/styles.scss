@@ -7,28 +7,44 @@
     box-sizing: border-box;
 }
 
-body,
-#root {
+body {
     height: 100vh;
+    overflow: hidden;
+}
+#root {
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
+    background: #6f9eaf;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
 }
 
 .title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px 0;
 }
 
 .description {
-    margin: 20px 0;
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-align: justify;
 }
 
 .loading-spinner {
     height: 100px;
     width: 100px;
     border: 5px solid;
-    border-right-color: dodgerblue;
+    border-right-color: #5fd4f4;
     border-radius: 50%;
     animation: rotation 1s linear infinite;
 
@@ -42,12 +58,26 @@ body,
 }
 
 .hint {
+    font-size: 1.1em;
     margin: 20px 0;
+    text-align: justify;
 }
 
 .button {
     cursor: pointer;
     padding: 10px;
+    background-color: #000;
+    border: 5px solid #5fd4f4;
+    color: #5fd4f4;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: .25s ease-in-out;
+    transition-property: background-color, color;
+
+    &:hover {
+        color: #000;
+        background-color: #5fd4f4;
+    }
 }
 
 @keyframes rotation {
