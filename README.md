@@ -46,13 +46,13 @@
 * [Code of conduct](#Code-of-conduct)
 * [Liscence](#Liscence)
 
-### Installation
+## Installation
 
 ```bash
 npm i @menseb/react-context-reducer
 ```
 
-### How it works
+## How it works
 
 The main goal of this package was to avoid having to define your own reducer function using a javascript [switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch). Instead, it creates the reducer function using your own actions.
 
@@ -101,9 +101,9 @@ dispatch.myAction({ foo: true });
 
 Finally, the ```Provider``` in this package will expose ```dispatch``` and ```state```, which you can consume using the different ways below.
 
-### How to use
+## How to use
 
-#### Provider
+### Provider
 
 ```jsx
 import { Provider } from '@menseb/react-context-reducer';
@@ -120,9 +120,9 @@ export default function MyProvider({ children }) {
 }
 ```
 
-#### Consumers
+### Consumers
 
-- ##### Consumer
+- #### Consumer
 
 ```jsx
 import { Component } from 'react';
@@ -141,7 +141,7 @@ export default class MyConsumer extends Component {
 }
 ```
 
-- ##### ConsumerState
+- #### ConsumerState
 
 ```jsx
 import { Component } from 'react';
@@ -160,7 +160,7 @@ export default class MyConsumerState extends Component {
 }
 ```
 
-- ##### ConsumerDispatch
+- #### ConsumerDispatch
 
 ```jsx
 import { Component } from 'react';
@@ -179,9 +179,9 @@ export default class MyConsumerDispatch extends Component {
 }
 ```
 
-#### Hooks
+## Hooks
 
-- ##### useContextReducer
+- #### useContextReducer
 
 ```jsx
 import { useContextReducer } from '@menseb/react-context-reducer';
@@ -195,7 +195,7 @@ export default function MyHook() {
 }
 ```
 
-- ##### useContextState
+- #### useContextState
 
 ```jsx
 import { useContextState } from '@menseb/react-context-reducer';
@@ -209,7 +209,7 @@ export default function MyHookState() {
 }
 ```
 
-- ##### useContextDispatch
+- #### useContextDispatch
 
 ```jsx
 import { useContextDispatch } from '@menseb/react-context-reducer';
@@ -223,9 +223,9 @@ export default function MyHookDispatch() {
 }
 ```
 
-#### PropTypes
+## PropTypes
 
-- ##### Provider props
+- #### Provider props
 
 | property | type | required | default |
 |----------|------|----------|---------|
@@ -234,24 +234,24 @@ export default function MyHookDispatch() {
 | config | Function | false | undefined |
 | initial  | Object | false | {} |
 
-- ##### Consumers props
+- #### Consumers props
 
 | property | type | required | default |
 |----------|------|----------|---------|
 | children | Function | true | none |
 
-- ##### Hooks props
+- #### Hooks props
 
 None, but you must follow the [Rules of Hooks](https://reactjs.org/docs/hooks-rules.html) from React.
 
-#### Scripts
+## Scripts
 
 See [scripts](/package.json/) from the ```package.json``` file.
 
-#### Code of conduct
+## Code of conduct
 
 See [code of conduct](/CODE_OF_CONDUCT.md/) from the ```CODE_OF_CONDUCT.md``` file.
 
-#### License
+## License
 
 See [license](/LICENSE.md/) from the ```LICENSE.md``` file.
