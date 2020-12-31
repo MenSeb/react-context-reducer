@@ -228,8 +228,8 @@ export default function MyHookDispatch() {
 
 | property | type | required | default |
 |----------|------|----------|---------|
-| actions | Object of functions | true | none |
-| children | React node | true | none |
+| actions | Object of Function | true | none |
+| children | React Node | true | none |
 | config | Function | false | undefined |
 | initial  | Object | false | {} |
 
