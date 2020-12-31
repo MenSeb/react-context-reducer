@@ -107,8 +107,7 @@ Finally, the ```Provider``` in this package will expose ```dispatch``` and ```st
 
 ```jsx
 import { Provider } from '@menseb/react-context-reducer';
-import config from 'path/to/config';
-import initial from 'path/to/initial';
+import { config, initial } from 'path/to/utilities';
 import * as actions from 'path/to/actions';
 
 export default function MyProvider({ children }) {
