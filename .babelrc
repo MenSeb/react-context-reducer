@@ -1,11 +1,4 @@
 {
-    "env": {
-        "production": {
-            "plugins": [
-                "babel-plugin-jsx-remove-data-test-id"
-            ]
-        }
-    },
     "plugins": [
         "@babel/transform-runtime"
     ],
