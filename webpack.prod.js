@@ -28,7 +28,7 @@ module.exports = merge(config, {
     mode: 'production',
     output: {
         filename: 'index.js',
-        library: 'reactContextReducer',
+        library: 'ReactContextReducer',
         libraryTarget: 'umd',
         path: path.resolve(__dirname, 'dist'),
     },
