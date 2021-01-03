@@ -23,6 +23,7 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 ![NPM](https://img.shields.io/npm/l/@menseb/react-context-reducer)
 ![NPM](https://img.shields.io/npm/v/@menseb/react-context-reducer)
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@menseb/react-context-reducer)
 
 ## Table of contents
 
