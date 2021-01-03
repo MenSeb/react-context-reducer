@@ -35,11 +35,9 @@
     "url": "https://github.com/MenSeb/react-context-reducer/issues"
   },
   "homepage": "https://github.com/MenSeb/react-context-reducer#readme",
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.12.8",
     "@babel/core": "^7.12.9",
-    "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "@testing-library/jest-dom": "^5.11.6",
